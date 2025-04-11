@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="El café mexicano y su importancia cultural">
+    <meta name="author" content="Marissa Pérez González">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>El Café en México</title>
+    <link rel="icon" type="image/x-icon" href="img/coffee-icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+      :root {
+        --cafe-oscuro: #3E2723;
+        --cafe-medio: #5D4037;
+        --cafe-claro: #8D6E63;
+        --cafe-crema: #D7CCC8;
+        --cafe-blanco: #EFEBE9;
+        --dorado: #D4AF37;
+      }
+      
+      body {
+        font-family: 'Raleway', sans-serif;
+        background-color: var(--cafe-blanco);
+        color: var(--cafe-oscuro);
+      }
+      
+      .navbar {
+        background-color: var(--cafe-oscuro) !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--cafe-crema) !important;
+      }
+      
+      .nav-link {
+        color: var(--cafe-crema) !important;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--dorado) !important;
+      }
+      
+      .dropdown-menu {
+        background-color: var(--cafe-blanco);
+        border-top: 5px solid var(--dorado) !important;
+      }
+      
+      .dropdown-item {
+        color: var(--cafe-oscuro);
+      }
+      
+      .dropdown-item:hover {
+        background-color: var(--cafe-crema);
+        color: var(--cafe-oscuro);
+      }
+      
+      .carousel {
+        margin-bottom: 4rem;
+      }
+      
+      .carousel-item img {
+        height: 500px;
+        object-fit: cover;
+      }
+      
+      .carousel-caption {
+        background: rgba(62, 39, 35, 0.85) !important;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      
+      .carousel-indicators button {
+        background-color: var(--cafe-claro);
+      }
+      
+      .carousel-indicators .active {
+        background-color: var(--dorado);
+      }
+      
+      .carousel-control-prev, .carousel-control-next {
+        background-color: rgba(62, 39, 35, 0.5);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .featurette-heading {
+        font-family: 'Playfair Display', serif;
+        color: var(--cafe-medio);
+        margin-top: 1.5rem;
+      }
+      
+      .featurette-divider {
+        margin: 5rem 0;
+        border-color: var(--cafe-claro);
+        opacity: 0.5;
+      }
+      
+      iframe, .instagram-media, .twitter-tweet {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      footer {
+        background-color: var(--cafe-oscuro);
+        color: var(--cafe-crema);
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+      
+      footer a {
+        color: var(--dorado);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-coffee me-2"></i>Café Mexicano
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Orígenes en México</a></li>
+              <li><a class="dropdown-item" href="#">Expansión colonial</a></li>
+              <li><a class="dropdown-item" href="#">Siglo XIX</a></li>
+              <li><a class="dropdown-item" href="#">Revolución y café</a></li>
+              <li><a class="dropdown-item" href="#">Modernización</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Chiapas</a></li>
+              <li><a class="dropdown-item" href="#">Veracruz</a></li>
+              <li><a class="dropdown-item" href="#">Oaxaca</a></li>
+              <li><a class="dropdown-item" href="#">Puebla</a></li>
+              <li><a class="dropdown-item" href="#">Otros estados</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Arabica</a></li>
+              <li><a class="dropdown-item" href="#">Robusta</a></li>
+              <li><a class="dropdown-item" href="#">Híbridos</a></li>
+              <li><a class="dropdown-item" href="#">Denominaciones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="#">Redes</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/cafe-chiapas.jpg" class="d-block w-100" alt="Café de Chiapas">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Café de Chiapas</h1>
+            <p>Conoce el café de altura producido en las montañas chiapanecas, reconocido mundialmente por su calidad.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/cafe-veracruz.jpg" class="d-block w-100" alt="Café de Veracruz">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Café de Veracruz</h1>
+            <p>Descubre los aromas y sabores únicos del café producido en las tierras veracruzanas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/cafe-oaxaca.jpg" class="d-block w-100" alt="Café de Oaxaca">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Café de Oaxaca</h1>
+            <p>El café oaxaqueño, una tradición que combina técnicas ancestrales con innovación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div class="container marketing">
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">AMECAFÉ</h2>
+        <p class="lead">La Asociación Mexicana de la Cadena Productiva del Café es el organismo líder en la promoción y desarrollo del sector cafetalero en México. Conoce más sobre sus programas de apoyo a productores y las iniciativas para mejorar la calidad del café mexicano.</p>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.amecafe.org.mx/" width="100%" height="450" style="border:none;"></iframe>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading">Secretaría de Agricultura</h2>
+        <p class="lead">El gobierno mexicano, a través de la SADER, implementa programas de apoyo al sector cafetalero. Conoce las estadísticas oficiales, programas de financiamiento y proyectos para modernizar la producción de café en México.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@cafedemexico" data-video-id="123456789" style="max-width: 605px;min-width: 325px;">
+          <section> <a target="_blank" title="@cafedemexico" href="https://www.tiktok.com/@cafedemexico">@cafedemexico</a> Conoce el proceso de producción del café mexicano <a title="cafemexicano" target="_blank" href="https://www.tiktok.com/tag/cafemexicano">#CafeMexicano</a> <a target="_blank" title="♬ sonido original - Café de México" href="https://www.tiktok.com/music/sonido-original-123456">♬ sonido original - Café de México</a> </section>
+        </blockquote>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">Café de México en Facebook</h2>
+        <p class="lead">Sigue las últimas noticias, eventos y promociones del café mexicano a través de nuestra página oficial en Facebook. Conoce a los productores, aprende sobre catas y participa en nuestros eventos virtuales.</p>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcafedemexico&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading">Café de México en Instagram</h2>
+        <p class="lead">Disfruta de las mejores fotografías de las plantaciones, procesos de producción y las tazas perfectas de café mexicano. Únete a nuestra comunidad de amantes del café.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CafeMexicano/" data-instgrm-version="14" style="width:100%;">
+          <!-- Contenido de Instagram -->
+        </blockquote>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">Café de México en Twitter</h2>
+        <p class="lead">Mantente informado con las últimas noticias, tendencias y eventos del mundo del café mexicano. Participa en conversaciones con expertos y productores.</p>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="twitter-tweet">
+          <p lang="es">El café mexicano sigue conquistando paladares alrededor del mundo. Hoy celebramos las nuevas exportaciones a Europa. #CaféMexicano #OrgulloNacional</p>&mdash; Café de México (@CafeDeMexico) <a href="https://twitter.com/CafeDeMexico/status/123456789">Fecha</a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container">
+    <p class="float-end"><a href="#">Volver arriba</a></p>
+    <p>&copy; 2024 Café Mexicano · <a href="#">Privacidad</a> · <a href="#">Términos</a></p>
+  </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js"></script>
+<script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>
