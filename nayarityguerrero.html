@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Guerrero y Nayarit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --rojo-guerrero: #C62828;
+            --naranja-guerrero: #EF6C00;
+            --naranja-nayarit: #EF6C00;
+            --verde-nayarit: #43A047;
+            --crema: #FFF3E0;
+        }
+
+        body {
+            background-color: var(--crema);
+        }
+
+        /* Estilos Guerrero */
+        .header-guerrero {
+            background: linear-gradient(rgba(198,40,40,0.8), rgba(239,108,0,0.6)),
+                        url('https://source.unsplash.com/random/1920x1080?coffee,guerrero') center/cover;
+            min-height: 400px;
+        }
+
+        .card-guerrero {
+            background-color: var(--rojo-guerrero);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Estilos Nayarit */
+        .header-nayarit {
+            background: linear-gradient(rgba(239,108,0,0.8), rgba(67,160,71,0.6)),
+                        url('https://source.unsplash.com/random/1920x1080?coffee,nayarit') center/cover;
+            min-height: 400px;
+            margin-top: 3rem;
+        }
+
+        .tabla-nayarit thead {
+            background-color: var(--verde-nayarit) !important;
+        }
+
+        .list-group-item {
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            transform: translateX(10px);
+            background-color: #f8f9fa;
+        }
+
+        /* Estilos generales */
+        .region-section {
+            padding: 4rem 0;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        .texto-blanco {
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección Guerrero -->
+    <header class="header-guerrero d-flex align-items-center justify-content-center">
+        <div class="text-center texto-blanco">
+            <h1 class="display-4">⚔️ Café Guerrero</h1>
+            <p class="lead">Sabor guerrerense con impacto social</p>
+        </div>
+    </header>
+
+    <main class="container region-section">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card-guerrero text-white p-4">
+                    <h3>Impacto Social</h3>
+                    <ul class="list-unstyled mt-3">
+                        <li>✔️ 60 cooperativas activas</li>
+                        <li>✔️ 85% producción sustentable</li>
+                        <li>✔️ Comercio justo certificado</li>
+                        <li>✔️ Programas de desarrollo comunitario</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <table class="table table-hover shadow">
+                    <thead class="bg-naranja-guerrero text-white">
+                        <tr>
+                            <th>Característica</th>
+                            <th>Dato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Exportación principal</td>
+                            <td>40% a Europa</td>
+                        </tr>
+                        <tr>
+                            <td>Altitud promedio</td>
+                            <td>800-1,500 msnm</td>
+                        </tr>
+                        <tr>
+                            <td>Variedad principal</td>
+                            <td>Arábica Típica</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección Nayarit -->
+    <header class="header-nayarit d-flex align-items-center justify-content-center">
+        <div class="text-center texto-blanco">
+            <h1 class="display-4">🌋 Café Nayarit</h1>
+            <p class="lead">Suelo volcánico, sabor único</p>
+        </div>
+    </header>
+
+    <main class="container region-section">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="list-group shadow">
+                    <li class="list-group-item">☕ Crecimiento anual: 12%</li>
+                    <li class="list-group-item">🌋 Minerales volcánicos</li>
+                    <li class="list-group-item">⭐ 85% café especial</li>
+                    <li class="list-group-item">🌱 Certificación orgánica</li>
+                    <li class="list-group-item">🌧️ Precipitación anual: 1,200 mm</li>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <table class="table table-hover tabla-nayarit shadow">
+                    <thead class="text-white">
+                        <tr>
+                            <th>Zona Productora</th>
+                            <th>% Producción</th>
+                            <th>Altitud (msnm)</th>
+                            <th>Variedad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tepic</td>
+                            <td>45%</td>
+                            <td>800-1,000</td>
+                            <td>Bourbon</td>
+                        </tr>
+                        <tr>
+                            <td>Xalisco</td>
+                            <td>30%</td>
+                            <td>900-1,200</td>
+                            <td>Typica</td>
+                        </tr>
+                        <tr>
+                            <td>Compostela</td>
+                            <td>25%</td>
+                            <td>1,000-1,300</td>
+                            <td>Maragogype</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
