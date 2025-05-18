@@ -5,97 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Veracruz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --verde-oscuro: #1B5E20;
-            --verde-claro: #4CAF50;
-            --dorado: #FFD700;
+            --cafe-oscuro: #4E342E;    
+            --cafe-medio: #6D4C41;     
+            --beige: #D7CCC8;          
+            --crema: #FFF3E0;         
+            --dorado: #70390a;         
         }
 
         body {
-            background: linear-gradient(45deg, #F1F8E9, #FFFFFF);
-            font-family: 'Georgia', serif;
+            background: var(--crema);
+            font-family: 'Merriweather', serif;
+            color: var(--cafe-oscuro);
         }
 
-        .veracruz-header {
-            background: var(--verde-oscuro);
+        .header-veracruz {
+            background: linear-gradient(rgba(78,52,46,0.9), rgba(109,76,65,0.8)),
+                        url('https://source.unsplash.com/random/1920x1080?coffee,veracruz') center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 4rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             border-bottom: 5px solid var(--dorado);
         }
 
-        .cafe-card {
-            transition: transform 0.3s;
-            border: 2px solid var(--verde-claro);
+        .card-veracruz {
+            background: white;
+            border: 2px solid var(--cafe-medio);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
         }
 
-        .cafe-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .list-group-item {
+            background-color: var(--beige);
+            border-color: var(--cafe-medio);
+            margin: 8px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
-        .tabla-veracruz th {
-            background: var(--verde-oscuro) !important;
+        .list-group-item:hover {
+            background-color: var(--cafe-medio);
+            color: white;
+            transform: translateX(10px);
+        }
+
+        table {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background-color: var(--cafe-oscuro) !important;
             color: white !important;
         }
 
-        @keyframes entradaVeracruz {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
+        th {
+            border-bottom: 2px solid var(--dorado) !important;
         }
 
-        .animado {
-            animation: entradaVeracruz 1s ease-out;
+        tbody tr:hover {
+            background-color: var(--beige);
+        }
+
+        .coffee-icon {
+            color: var(--dorado);
+            margin-right: 10px;
+        }
+
+        .img-destacada {
+            border: 3px solid var(--cafe-medio);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .img-destacada:hover {
+            transform: scale(1.03);
         }
     </style>
 </head>
 <body>
-    <header class="veracruz-header text-center animado">
-        <h1>🌱 Café Veracruz</h1>
-        <p class="lead">Tradición desde 1785</p>
+    <header class="header-veracruz">
+        <div class="text-center">
+            <h1 class="display-1"><i class="fa-solid fa-mug-hot coffee-icon"></i>Café Veracruz</h1>
+            <p class="lead mt-3">Tradición desde 1796</p>
+        </div>
     </header>
 
-    <main class="container my-5">
-        <!-- Contenido específico -->
-    </main>
+    <main class="container py-5">
+        <div class="card-veracruz">
+            <h1 class="mb-4"><i class="fa-solid fa-seedling coffee-icon"></i>VERACRUZ Y EL CAFÉ</h1>
+            <div class="row">
+                <!-- Columna Izquierda -->
+                <div class="col-md-6">
+                    <p class="lead">El café es uno de los principales productos de exportación de México, siendo Veracruz uno de los estados líderes en producción. Principales variedades:</p>
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fa-solid fa-mountain coffee-icon"></i>Altitud: 400-1,200 msnm</li>
+                        <li class="list-group-item"><i class="fa-solid fa-cookie-bite coffee-icon"></i>Notas a nuez y chocolate</li>
+                        <li class="list-group-item"><i class="fa-solid fa-leaf coffee-icon"></i>85% café arábica premium</li>
+                        <li class="list-group-item"><i class="fa-solid fa-heart coffee-icon"></i>Certificación orgánica</li>
+                    </ul>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Animación al cargar
-            document.querySelectorAll('.animado').forEach(el => {
-                el.style.opacity = 0;
-                setTimeout(() => el.style.opacity = 1, 100);
-            });
+                    <h2 class="mt-4"><i class="fa-solid fa-seedling coffee-icon"></i>Variedades</h2>
+                    <ul class="list-unstyled">
+                        <li><h4><strong>• Typica</strong></h4></li>
+                        <li><h4><strong>• Bourbon</strong></h4></li>
+                        <li><h4><strong>• Caturra</strong></h4></li>
+                    </ul>
+                </div>
 
-            // Interacción con tarjetas
-            document.querySelectorAll('.cafe-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    card.classList.toggle('bg-success');
-                });
-            });
-        });
-    </script>
-    <body class="veracruz-theme">
-    <header class="veracruz-header">
-        <h1>☕ Café de Veracruz</h1>
-        <nav><!-- Mismo navbar --></nav>
-    </header>
+                <!-- Columna Derecha -->
+                <div class="col-md-6">
+                    <!-- Tabla -->
+                    <table class="table table-hover mb-4">
+                        <thead>
+                            <tr>
+                                <th><i class="fa-solid fa-map-location-dot"></i> Región</th>
+                                <th><i class="fa-solid fa-percent"></i> Producción</th>
+                                <th><i class="fa-solid fa-wheat-awn"></i> Variedad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coatepec</td>
+                                <td>40%</td>
+                                <td>Typica</td>
+                            </tr>
+                            <tr>
+                                <td>Xico</td>
+                                <td>30%</td>
+                                <td>Bourbon</td>
+                            </tr>
+                            <tr>
+                                <td>Córdoba</td>
+                                <td>20%</td>
+                                <td>Maragogype</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-    <main class="classic-layout">
-        <section class="text-block">
-            <h2>Tradición Cafetalera</h2>
-            <p>Texto histórico...</p>
-            <img src="veracruz1.jpg" alt="Cafetales">
-        </section>
-        
-        <div class="split-layout">
-            <div class="left-panel">
-                <h3>Características</h3>
-                <ul><!-- Lista --></ul>
+                    <!-- Imagen y Reconocimientos -->
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <img src="https://source.unsplash.com/random/600x800?coffee,plantation" 
+                                alt="Café Veracruz" 
+                                class="img-fluid img-destacada">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h4><i class="fa-solid fa-award coffee-icon"></i>Reconocimientos</h4>
+                                    <ul class="list-unstyled">
+                                        <li>• Mejor Café de México 2022</li>
+                                        <li>• Certificación Rainforest Alliance</li>
+                                        <li>• Sello Denominación de Origen</li>
+                                    </ul>
+                                </div>
+                                <a href="https://hotelesemporio.com/blog/veracruz-y-el-cafe/" 
+                                    class="btn mt-3 align-self-start" 
+                                    style="background-color: var(--cafe-oscuro); color: white;">
+                                    <i class="fa-solid fa-coffee-bean"></i> Conoce más
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="right-panel">
-                <table><!-- Datos --></table>
+
+
+            <div class="row mt-5">
+                <div class="col-md-12">
+                   <h1 class="mb-4"><i class="fa-solid fa-seedling coffee-icon"></i>Typica</h1>
+                   <br>
+                    <p class="lead">Es una de las variedades más tradicionales y reconocidas en el mundo del café. Se originó en la isla de Java en Indonesia y se ha cultivado ampliamente en diversas regiones cafetaleras.</p>
+                    <br>
+                    <tt class="mb-4" ><i class="fa-solid fa-seedling coffee-icon"> C A R A C T E R I S T I C A S  </i></tt>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://source.unsplash.com/random/600x400?coffee,beans" 
+                                alt="Café Typica" 
+                                class="img-fluid img-destacada mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Sabor suave y equilibrado.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Aroma floral y dulce.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Acidez suave y agradable.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Notas de chocolate, nueces y caramelo.</li>
+                       
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="row mt-5">
+                <div class="col-md-12">
+                   <h1 class="mb-4"><i class="fa-solid fa-seedling coffee-icon"></i>Bourbon</h1>
+                   <br>
+                    <p class="lead">El café Bourbon es una variedad de café arábica con un legado histórico que se remonta a la isla Bourbon (hoy llamada Reunión) en el Océano Índico. Es reconocido por su calidad excepcional y perfil de sabor distintivo.</p>
+                    <br>
+                    <tt class="mb-4" ><i class="fa-solid fa-seedling coffee-icon"> C A R A C T E R I S T I C A S  </i></tt>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://source.unsplash.com/random/600x400?coffee,beans" 
+                                alt="Café Typica" 
+                                class="img-fluid img-destacada mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Acidez brillante y balanceada.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Notas de caramelo, chocolate y frutas.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Su proceso de maduración es lento; por tal razón es capaz de desarrollar sabores complejos.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Aroma dulce y afrutado.</li>
+                       
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                        <div class="row mt-5">
+                <div class="col-md-12">
+                   <h1 class="mb-4"><i class="fa-solid fa-seedling coffee-icon"></i>Caturra</h1>
+                   <br>
+                    <p class="lead">La variedad de café Caturra fue descubierta en Brasil en la década de 1930 como una mutación natural del Bourbon. Es conocida por su sabor suave y dulce, así como por su resistencia a enfermedades como la roya.</p>
+                    <br>
+                    <tt class="mb-4" ><i class="fa-solid fa-seedling coffee-icon"> C A R A C T E R I S T I C A S  </i></tt>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://source.unsplash.com/random/600x400?coffee,beans" 
+                                alt="Café Typica" 
+                                class="img-fluid img-destacada mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Ideal para tostados medios que resalten su dulzura.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Resistente a enfermedades como la roya.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Variedad de porte bajo, lo que facilita la cosecha.</li>
+                            <li class="list-group-item"><i class="fa-solid fa-coffee coffee-icon"></i>Acidez brillante y cítrica.</li>
+                       
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 </body>
