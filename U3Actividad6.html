@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 3 || Actividad 06</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Marissa Perez González">
+    <meta name="Fecha" content="12 de mayo de 2025">
+    <meta name="Descripción" content="JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap">
+
+    <style>
+        body {
+            color: rgb(255, 225, 0);
+            background-color: rgb(159, 203, 253);
+            border: rgb(121, 0, 219) 2px dashed;
+        }
+    </style>
+</head>
+
+<body style="color:rgb(0, 0, 0);background-color:rgb(216, 190, 249)">
+    <h1>Unidad 3 | Actividad 06 :: Tema (Eventos)</h1>
+    
+    <button onclick='document.body.style.backgroundColor = "pink"'>Cambiar a rosa</button><br><br>
+    <button onclick='document.body.style.backgroundColor = "yellow"'>Cambiar a amarillo</button><br><br>
+    <button onclick='document.body.style.backgroundColor = "purple"'>Cambiar a morado</button><br><br>
+
+    <div id="funcionarios">
+        <h2>Lista de funcionarios:</h2>
+        <ul id="lista_funcionarios">
+            <li>Marissa</li>
+            <li>Medellin</li>
+            <li>Gaby</li>
+            <li>Enrique</li>
+        </ul>
+    </div>
+
+    <p>Puedes añadir más elementos a la lista utilizando el siguiente formulario:</p>
+
+    <form onsubmit="agregarFuncionario(); return false;">
+        <input type="text" id="nuevo_funcionario" placeholder="Nombre del funcionario">
+        <button type="submit">Añadir funcionario</button>
+    </form>
+
+    <script>
+        function agregarFuncionario() {
+            var nombre = document.getElementById("nuevo_funcionario").value;
+            if (nombre.trim() !== "") {
+                var li = document.createElement("li");
+                li.textContent = nombre;
+                document.getElementById("lista_funcionarios").appendChild(li);
+                document.getElementById("nuevo_funcionario").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
+
