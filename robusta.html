@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Robusta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e5ab;
+            color: #5b3e31;
+            text-align: center;
+        }
+        .coffee-section {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #d9b382;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .coffee-section:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        video {
+            margin-top: 15px;
+            border: 2px solid #734f35;
+        }
+    </style>
+</head>
+<body>
+    <section class="coffee-section">
+        <h1>Café Robusta</h1>
+        <p>El café Robusta es conocido por su intensidad y mayor contenido de cafeína.</p>
+        
+        <img src="robusta.jpg" alt="Granos de Café Robusta">
+        
+        <ul>
+            <li>Sabor fuerte y amargo</li>
+            <li>Mayor contenido de cafeína</li>
+            <li>Se cultiva en regiones bajas y cálidas</li>
+        </ul>
+        
+        <video width="400" controls>
+            <source src="robusta_video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </section>
+</body>
+</html>

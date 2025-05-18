@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denominaciones de Café</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e5ab;
+            color: #5b3e31;
+            text-align: center;
+        }
+        .coffee-section {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #d9b382;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .coffee-section:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        video {
+            margin-top: 15px;
+            border: 2px solid #734f35;
+        }
+    </style>
+</head>
+<body>
+    <section class="coffee-section">
+        <h1>Café con Denominación de Origen</h1>
+        <p>Los cafés con denominación de origen reflejan la identidad de la tierra donde se cultivan.</p>
+        
+        <img src="denominacion.jpg" alt="Café con Denominación">
+        
+        <ul>
+            <li>Café de Chiapas</li>
+            <li>Café Veracruzano</li>
+            <li>Café de Oaxaca</li>
+        </ul>
+        
+        <video width="400" controls>
+            <source src="denominacion_video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </section>
+</body>
+</html>
