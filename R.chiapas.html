@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Chiapas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --cafe-chiapas: #4E342E;
+            --verde-chiapas: #2E7D32;
+            --ocre: #D84315;
+            --crema: #FFF3E0;
+        }
+
+        body {
+            background: var(--crema);
+            font-family: 'Merriweather', serif;
+            color: var(--cafe-chiapas);
+        }
+
+        .header-chiapas {
+            background: linear-gradient(rgba(78,52,46,0.9), rgba(78,52,46,0.7)),
+                        url('https://source.unsplash.com/random/1920x1080?coffee,mountain') center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+        }
+
+        .timeline-chiapas {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        .timeline-item {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 4px solid var(--verde-chiapas);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(20px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .timeline-item::before {
+            content: '🌱';
+            position: absolute;
+            left: -25px;
+            top: 0;
+            font-size: 1.5rem;
+            background: var(--crema);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .galeria-chiapas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .galeria-item:hover {
+            transform: scale(1.05);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .data-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating-icon {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .card.bg-cafe-chiapas {
+            background-color: var(--cafe-chiapas) !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-chiapas">
+        <div class="text-center">
+            <h1 class="display-1 floating-icon">☕ Café Chiapas</h1>
+            <p class="lead">Denominación de Origen desde 2003</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <section class="timeline-chiapas">
+            <div class="timeline-item">
+                <h2>Historia del Café en Chiapas</h2>
+                <p class="lead">El grano llegó al estado chiapaneco en 1847. Desde entonces esta región se ha caracterizado por su linaje cafetalero, el cual fue reconocido con la Denominación de Origen otorgada en 2003.
+                Sus cultivos en las faldas del volcán Tacaná, su geografía privilegiada con óptimas temperaturas y humedad, sus procesos de producción sumamente cuidados, así como los atributos de sus granos (acidez brillante, notas achocolatadas y aroma intenso) llevaron a Chiapas a recibir esta distinción, </p>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><i class="fas fa-mountain me-2"></i>Importancia ambiental: </li>
+                    <li class="list-group-item"><i class="fas fa-volcano me-2"></i>cultivos bajo árboles de sombra, lo cual promueve la biodiversidad, captura dióxido de carbono, produce oxígeno y conserva el suelo y mantos acuíferos. </li>
+                    <li class="list-group-item"><i class="fas fa-cloud-sun me-2"></i>Los cafetales de sombra se encuentran dentro de diversas Áreas Naturales Protegidas, como la Reserva de la Biosfera El Triunfo, la Reserva de la Biosfera de la Sepultura, la Reserva de la Biosfera de La Encrucijada y la Reserva de la Biosfera del Volcán Tacaná.</li>
+                </ul>
+                <p>Estas condiciones crearon el entorno perfecto para desarrollar uno de los cafés más premiados del mundo. Actualmente, Chiapas produce el <strong>35% del café mexicano</strong> y es reconocido internacionalmente por sus:</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card bg-success text-white mb-3">
+                            <div class="card-body">
+                                <h5><i class="fas fa-award me-2"></i>Reconocimientos</h5>
+                                <ul class="list-unstyled">
+                                    <li>• Premio Internacional SCA 2022</li>
+                                    <li>• Mejor Café Orgánico 2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-cafe-chiapas text-white">
+                            <div class="card-body">
+                                <h5><i class="fas fa-seedling me-2"></i>Variedades</h5>
+                                <ul class="list-unstyled">
+                                    <li>• Typica</li>
+                                    <li>• Bourbon</li>
+                                    <li>• Maragogype</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4">Conoce el <a href="https://www.cafecesmach.mx" target="_blank" class="text-success fw-bold">Café Triunfo</a>, considerado el mejor café de Chiapas y ganador de múltiples premios internacionales.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h2>Datos de Producción 2023</h2>
+                <div class="data-card">
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Región</th>
+                                <th>Hectáreas</th>
+                                <th>Producción Anual</th>
+                                <th>% Orgánico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sierra Madre</td>
+                                <td>45,000</td>
+                                <td>180,000 ton</td>
+                                <td>85%</td>
+                            </tr>
+                            <tr>
+                                <td>Soconusco</td>
+                                <td>32,000</td>
+                                <td>128,000 ton</td>
+                                <td>92%</td>
+                            </tr>
+                            <tr>
+                                <td>Altos de Chiapas</td>
+                                <td>28,000</td>
+                                <td>112,000 ton</td>
+                                <td>78%</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-secondary">
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td>105,000</td>
+                                <td>420,000 ton</td>
+                                <td>85%</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <p class="mt-3">* Datos del Instituto Nacional del Café (INCAFÉ)</p>
+            </div>
+        </section>
+
+        <section class="galeria-chiapas">
+            <div class="galeria-item">
+                <img src="chiapasimagen2" alt="Cafetal">
+            </div>
+            <div class="galeria-item">
+                <img src="chiapasimagen1" alt="Cosecha">
+            </div>
+            <div class="galeria-item">
+                <iframe width="100%" height="300" src="https://www.youtube.com/watch?v=oW7tj6jJYiE" 
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animación de scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateX(-50px)';
+                item.style.transition = 'all 0.8s ease-out';
+                observer.observe(item);
+            });
+
+            // Galería interactiva
+            document.querySelectorAll('.galeria-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const modal = document.createElement('div');
+                    modal.style = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100vh;
+                        background: rgba(0,0,0,0.9);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                        cursor: zoom-out;
+                    `;
+                    
+                    const content = item.querySelector('img')?.cloneNode() || 
+                                  item.querySelector('iframe')?.cloneNode();
+                    if(content) {
+                        content.style.maxWidth = '90vw';
+                        content.style.maxHeight = '90vh';
+                        modal.appendChild(content);
+                    }
+                    
+                    modal.addEventListener('click', () => modal.remove());
+                    document.body.appendChild(modal);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
