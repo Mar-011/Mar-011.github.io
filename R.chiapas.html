@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Café Chiapas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --cafe-chiapas: #4E342E;
@@ -104,22 +113,12 @@
         .card.bg-cafe-chiapas {
             background-color: var(--cafe-chiapas) !important;
         }
-    </style>
-</head>
-<style>
-      :root {
+
+         
+        :root {
         --cafe-oscuro: #3E2723;
-        --cafe-medio: #5D4037;
-        --cafe-claro: #8D6E63;
         --cafe-crema: #D7CCC8;
-        --cafe-blanco: #EFEBE9;
         --dorado: #D4AF37;
-      }
-      
-      body {
-        font-family: 'Raleway', sans-serif;
-        background-color: var(--cafe-blanco);
-        color: var(--cafe-oscuro);
       }
       
       .navbar {
@@ -146,7 +145,7 @@
       }
       
       .dropdown-menu {
-        background-color: var(--cafe-blanco);
+        background-color: white;
         border-top: 5px solid var(--dorado) !important;
       }
       
@@ -156,117 +155,73 @@
       
       .dropdown-item:hover {
         background-color: var(--cafe-crema);
-        color: var(--cafe-oscuro);
       }
-      
-      .carousel {
-        margin-bottom: 4rem;
-      }
-      
-      .carousel-item img {
-        height: 500px;
-        object-fit: cover;
-      }
-      
-      .carousel-caption {
-        background: rgba(62, 39, 35, 0.85) !important;
-        border-radius: 20px;
-        padding: 20px;
-      }
-      
-      .carousel-indicators button {
-        background-color: var(--cafe-claro);
-      }
-      
-      .carousel-indicators .active {
-        background-color: var(--dorado);
-      }
-      
-      .carousel-control-prev, .carousel-control-next {
-        background-color: rgba(62, 39, 35, 0.5);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      
-      .featurette-heading {
-        font-family: 'Playfair Display', serif;
-        color: var(--cafe-medio);
-        margin-top: 1.5rem;
-      }
-      
-      .featurette-divider {
-        margin: 5rem 0;
-        border-color: var(--cafe-claro);
-        opacity: 0.5;
-      }
-      
-      iframe, .instagram-media, .twitter-tweet {
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      }
-      
-      footer {
-        background-color: var(--cafe-oscuro);
-        color: var(--cafe-crema);
-        padding: 2rem 0;
-        margin-top: 3rem;
-      }
-      
-      footer a {
-        color: var(--dorado);
-        text-decoration: none;
-      }
+
+
     </style>
-  </head>
-  <body>
-<header data-bs-theme="dark">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="fas fa-coffee me-2"></i>Café Mexicano
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-         <a class="nav-link fw-bold py-1 px-0 mx-2" href="/proyecto.html">Inicio</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="origenesdelcafe.html">Orígenes en México</a></li>
-              <li><a class="dropdown-item" href="revolucion.html">Revolución y café</a></li>
-              <li><a class="dropdown-item" href="modernizacion.html">Modernización</a></li>
+
+
+    
+
+</head>
+
+
+
+<body>
+
+    <header class="header-chiapas">
+        <div class="text-center">
+            <h1 class="display-1 floating-icon">☕ Café Chiapas</h1>
+            <p class="lead">Denominación de Origen desde 2003</p>
+        </div>
+    </header>
+    
+     <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="fas fa-coffee me-2"></i>Café Mexicano
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <a class="nav-link fw-bold py-1 px-0 mx-2" href="/proyecto.html">Inicio</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="origenesdelcafe.html">Orígenes en México</a></li>
+                  <li><a class="dropdown-item" href="revolucion.html">Revolución y café</a></li>
+                  <li><a class="dropdown-item" href="modernizacion.html">Modernización</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="R.chiapas.html">Chiapas</a></li>
+                  <li><a class="dropdown-item" href="R.veracruz.html">Veracruz</a></li>
+                  <li><a class="dropdown-item" href="R.oaxaca.html">Oaxaca</a></li>
+                  <li><a class="dropdown-item" href="R.puebla.html">Puebla</a></li>
+                  <li><a class="dropdown-item" href="R.nayarityguerrero.html">Otros estados</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="arabica.html">Arabica</a></li>
+                  <li><a class="dropdown-item" href="robusta.html">Robusta</a></li>
+                  <li><a class="dropdown-item" href="hibrida.html">Híbridos</a></li>
+                  <li><a class="dropdown-item" href="denominaciones.html">Denominaciones</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link active" href="#">Redes</a></li>
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="R.chiapas.html">Chiapas</a></li>
-              <li><a class="dropdown-item" href="R.veracruz.html">Veracruz</a></li>
-              <li><a class="dropdown-item" href="R.oaxaca.html">Oaxaca</a></li>
-              <li><a class="dropdown-item" href="R.puebla.html">Puebla</a></li>
-              <li><a class="dropdown-item" href="R.nayarityguerrero.html">Otros estados</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="arabica.html">Arabica</a></li>
-              <li><a class="dropdown-item" href="robusta.html">Robusta</a></li>
-              <li><a class="dropdown-item" href="hibrida.html">Híbridos</a></li>
-              <li><a class="dropdown-item" href="denominaciones.html">Denominaciones</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link active" href="#">Redes</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <main class="container py-5">
         <section class="timeline-chiapas">
             <div class="timeline-item">
@@ -424,6 +379,10 @@
                 });
             });
         });
+        
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
