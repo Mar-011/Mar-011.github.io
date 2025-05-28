@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modernización del Café</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Cormorant+Garamond:wght@500&family=Lora:ital,wght@1,500&family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+
+    :root {
+    --cafe-claro: #D2B48C;
+    --cafe-medio: #8B5A2B;
+    --cafe-oscuro: #5C4033;
+    --chocolate: #3D1F00;
+    --cafe-oscuro: #3E2723;
+    --cafe-crema: #D7CCC8;
+    --dorado: #D4AF37;
+    }
+
+    body {
+    font-family: 'EB Garamond', serif;
+    background: linear-gradient(45deg, var(--cafe-crema), var(--cafe-claro));
+    color: var(--cafe-oscuro);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    }
+
+    header {
+    margin-bottom: 60px;
+    }
+
+    .contenedor {
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--cafe-medio);
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: tituloFlotante 2s ease-in-out infinite;
+    }
+
+    h2 {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: var(--cafe-oscuro);
+    border-left: 5px solid var(--chocolate);
+    padding-left: 15px;
+    margin: 2rem 0;
+    font-size: 2rem;
+    }
+
+    h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cafe-medio);
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    }
+
+    p {
+    margin: 1rem 0;
+    padding: 0 1rem;
+    font-family: 'EB Garamond', serif;
+    }
+
+    img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 2rem auto;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: aparecer 1s ease-out;
+    }
+
+    th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--cafe-claro);
+    }
+
+    th {
+    background-color: var(--cafe-medio);
+    color: white;
+    font-weight: 700;
+    }
+
+    tr:hover {
+    background-color: var(--cafe-claro);
+    }
+
+    a {
+    color: var(--chocolate);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+    }
+
+    a:hover {
+    color: var(--cafe-medio);
+    }
+
+    ul, ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+    }
+
+    li {
+    margin: 0.8rem 0;
+    padding-left: 1rem;
+    font-family: 'EB Garamond', serif;
+    }
+
+    ul li::marker {
+    color: var(--chocolate);
+    font-size: 1.2em;
+    }
+
+    iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @keyframes tituloFlotante {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    }
+
+    @keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+
+    .destacado {
+    background: var(--cafe-claro);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    border-left: 5px solid var(--chocolate);
+    }
+
+    .video-container {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--cafe-crema);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    }
+
+    .video-container iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    border: 3px solid var(--chocolate);}
+
+      .navbar {
+        background-color: var(--cafe-oscuro) !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--cafe-crema) !important;
+      }
+      
+      .nav-link {
+        color: var(--cafe-crema) !important;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+      
+      .nav-link:hover, .nav-link.active {
+        color: var(--dorado) !important;
+      }
+      
+      .dropdown-menu {
+        background-color: white;
+        border-top: 5px solid var(--dorado) !important;
+      }
+      
+      .dropdown-item {
+        color: var(--cafe-oscuro);
+      }
+      
+      .dropdown-item:hover {
+        background-color: var(--cafe-crema);
+      }
+
+</style>
+</head>
+<body>
+
+ <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="fas fa-coffee me-2"></i>Café Mexicano
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <a class="nav-link fw-bold py-1 px-0 mx-2" href="/proyecto.html">Inicio</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="origenesdelcafe.html">Orígenes en México</a></li>
+                  <li><a class="dropdown-item" href="revolucion.html">Revolución y café</a></li>
+                  <li><a class="dropdown-item" href="modernizacion.html">Modernización</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="R.chiapas.html">Chiapas</a></li>
+                  <li><a class="dropdown-item" href="R.veracruz.html">Veracruz</a></li>
+                  <li><a class="dropdown-item" href="R.oaxaca.html">Oaxaca</a></li>
+                  <li><a class="dropdown-item" href="R.puebla.html">Puebla</a></li>
+                  <li><a class="dropdown-item" href="R.nayarityguerrero.html">Otros estados</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="arabica.html">Arabica</a></li>
+                  <li><a class="dropdown-item" href="robusta.html">Robusta</a></li>
+                  <li><a class="dropdown-item" href="hibrida.html">Híbridos</a></li>
+                  <li><a class="dropdown-item" href="denominaciones.html">Denominaciones</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link active" href="#">Redes</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<div class="contenedor">
+    <br>
+    <br>
+  <h1>☕ De la tradición a la modernización tecnológica</h1>
+  
+  <h2>Transformación Digital en la Caficultura</h2>
+  <p>La modernización de la caficultura en México implica diversos aspectos, desde la adopción de tecnologías de producción y procesamiento hasta la promoción de prácticas agrícolas sostenibles y la diversificación del mercado.</p>
+  
+  <img src="modernizaciontres.jpg" alt="Tecnología en caficultura">
+  
+  <div class="destacado">
+    <h3>Aspectos clave de la modernización:</h3>
+    <ol>
+      <li>Tecnología y capacitación:</li>
+      <p>Se promueve la adopción de tecnologías de producción, como la utilización de maquinaria moderna y técnicas de manejo del suelo y la fertilización.</p>
+      <li>Sostenibilidad:</li>
+      <p>Se busca la producción de café de manera sostenible, respetando el medio ambiente y las comunidades locales.</p>
+      <li>Diversificación y valor agregado:</li>
+      <p>Se fomenta la producción de cafés especiales y la diversificación de productos derivados del café.</p>
+      <li>Investigación y desarrollo:</li>
+      <p>Se promueve la investigación y el desarrollo de nuevas variedades de café, así como la mejora de técnicas de procesamiento y comercialización.</p>
+      <li>Financiamiento y apoyo a pequeños productores:</li>
+      <p>Se implementan programas de financiamiento y asistencia técnica para apoyar a los pequeños productores.</p>
+    </ol>
+  </div>
+
+  <h2>Evolución de la Producción</h2>
+  <p>Comparativa de métodos tradicionales vs. modernos:</p>
+  
+  <table>
+    <tr>
+      <th>Aspecto</th>
+      <th>1980-2000</th>
+      <th>2020-actualidad</th>
+    </tr>
+    <tr>
+      <td>Selección de granos</td>
+      <td>Manual</td>
+      <td>Escáneres hiperespectrales</td>
+    </tr>
+    <tr>
+      <td>Tueste</td>
+      <td>Experiencia artesanal</td>
+      <td>Control por termopares digitales</td>
+    </tr>
+    <tr>
+      <td>Productividad</td>
+      <td>50 kg/día</td>
+      <td>500 kg/día</td>
+    </tr>
+  </table>
+
+  <h3>La innovación en métodos de preparación ha abierto nuevas posibilidades en cuanto a sabor y experiencia.</h3>
+  <p>Frente a este panorama, invertir en herramientas tecnológicas como sensores de temperatura, RFID y computadores móviles, ya que permiten:</p>
+  <ul>
+    <li>Conectividad para rastrear los granos de café</li>
+    <li>Preservación de la calidad del producto</li>
+    <li>Gestión de inventarios eficiente</li>
+    <li>Visibilidad de la ubicación del grano</li>
+    <li>Una cadena de suministro más eficiente y conectada</li>
+  </ul>
+
+  <img src="modernizaciondos.jpg" alt="Robótica en café">
+
+  <h2>Recursos Digitales</h2>
+  <p>Explora estas plataformas mexicanas sobre café y tecnología:</p>
+  <p><a href="https://perfectdailygrind.com/es/2022/10/25/canales-digitales-venta-cafes-diferenciados/" target="_blank">🌐 Perfect Daily Grind</a></p>
+  <p><a href="https://joinposter.mx/negocio/punto-de-venta-para-cafeterias" target="_blank">🚀 Poster POS</a></p>
+  <p><a href="https://www.digitalcoffeefuture.com/sobre-nosotros" target="_blank">☕ Digital Coffee Future</a></p>
+
+  <h3>Café de Innovación: Lo necesario relacionado con innovación y emprendimiento</h3>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/h-Y0NzFHjMw" title="Retail 4.0: Innovación que Transforma" allowfullscreen></iframe>
+  </div>
+
+  <img src="modernizacionuno.jpg" alt="Café inteligente">
+  
+  <h3>Sostenibilidad Tecnológica</h3>
+  <p>Las nuevas máquinas reducen hasta un 40% el consumo energético y utilizan materiales 100% reciclables, marcando un hito en producción eco-amigable.</p>
+</div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

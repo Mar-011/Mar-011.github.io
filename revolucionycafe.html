@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revolución del Café</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    :root {
+        --cafe-oscuro: #5C4033;
+        --cafe-medio: #8B5A2B;
+        --cafe-claro: #D2B48C;
+        --chocolate: #3D1F00;
+        --fondo-crema: #F5E3C9;
+        --cafe-oscuro: #3E2723;
+        --cafe-crema: #D7CCC8;
+        --dorado: #D4AF37;
+        }
+
+        .navbar {
+        background-color: var(--cafe-oscuro) !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--cafe-crema) !important;
+        }
+
+        .nav-link {
+        color: var(--cafe-crema) !important;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+        color: var(--dorado) !important;
+        }
+
+        .dropdown-menu {
+        background-color: white;
+        border-top: 5px solid var(--dorado) !important;
+        }
+
+        .dropdown-item {
+        color: var(--cafe-oscuro);
+        }
+
+        .dropdown-item:hover {
+        background-color: var(--cafe-crema);
+        }
+
+    body {
+        font-family: 'EB Garamond', serif;
+        background-color: var(--fondo-crema);
+        color: var(--chocolate);
+        padding-top: 100px;
+    }
+
+    .container-main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: var(--cafe-crema);
+        border-radius: 15px;
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2 {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: var(--cafe-medio);
+        border-bottom: 2px solid var(--cafe-claro);
+        padding-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-section {
+        padding: 2rem;
+        background: var(--cafe-claro);
+        border-radius: 15px;
+        margin: 2rem 0;
+    }
+
+    .coffee-machine-card {
+        background: var(--cafe-crema);
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        transition: transform 0.3s;
+        opacity: 1;
+    }
+
+    .coffee-machine-card table {
+        background: var(--cafe-crema) !important;
+    }
+
+    img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin: 1rem 0;
+    }
+
+    table {
+        width: 100%;
+        background: var(--cafe-claro);
+        color: var(--chocolate);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th {
+        background: var(--cafe-medio);
+        color: var(--fondo-crema);
+    }
+
+    a {
+        color: var(--cafe-medio);
+        text-decoration: none;
+    }
+
+    .icon-cafe {
+        font-size: 1.5rem;
+        color: var(--cafe-medio);
+        margin-right: 0.5rem;
+    }
+
+    p {
+        font-family: 'EB Garamond', serif;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+ <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="fas fa-coffee me-2"></i>Café Mexicano
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <a class="nav-link fw-bold py-1 px-0 mx-2" href="/proyecto.html">Inicio</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="origenesdelcafe.html">Orígenes en México</a></li>
+                  <li><a class="dropdown-item" href="revolucion.html">Revolución y café</a></li>
+                  <li><a class="dropdown-item" href="modernizacion.html">Modernización</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="R.chiapas.html">Chiapas</a></li>
+                  <li><a class="dropdown-item" href="R.veracruz.html">Veracruz</a></li>
+                  <li><a class="dropdown-item" href="R.oaxaca.html">Oaxaca</a></li>
+                  <li><a class="dropdown-item" href="R.puebla.html">Puebla</a></li>
+                  <li><a class="dropdown-item" href="R.nayarityguerrero.html">Otros estados</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="arabica.html">Arabica</a></li>
+                  <li><a class="dropdown-item" href="robusta.html">Robusta</a></li>
+                  <li><a class="dropdown-item" href="hibrida.html">Híbridos</a></li>
+                  <li><a class="dropdown-item" href="denominaciones.html">Denominaciones</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link active" href="#">Redes</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<div class="container-main">
+        <h1><i class="fas fa-industry icon-cafe"></i>La Revolución Industrial y el Café</h1>
+        
+        <section class="timeline-section">
+            <h2><i class="fas fa-history icon-cafe"></i>Antes del Café</h2>
+            <p>Antes de que el café se convirtiera en una industria global, existían otras bebidas populares y prácticas agrícolas predominantes. En Europa, la cerveza era la bebida más común, incluso para el desayuno, debido a las dificultades para obtener agua potable. El té también se consumía ampliamente, con evidencia de que se preparaba y consumía en China miles de años antes de que el café se cultivara por primera vez.</p>
+            <ol>
+                <li>Jornadas reguladas por la luz solar</li>
+                <li>Consumo predominante de alcohol (cerveza como bebida principal)</li>
+                <li>Agua insalubre y dietas poco nutritivas</li>
+            </ol>
+            <img src="revulucionuno.jpg" alt="Revolución Industrial">
+        </section>
+
+        <section class="timeline-section">
+            <h2><i class="fas fa-coffee icon-cafe"></i>El Surgimiento del Café</h2>
+            <p>El surgimiento del café con la industrialización se produjo debido a la creciente demanda de energía y concentración por parte de los trabajadores de las fábricas, quienes necesitaban mantenerse alerta y productivos durante largas jornadas de trabajo. El café, gracias a su contenido de cafeína, se convirtió en una bebida popular que ayudaba a los trabajadores a superar la fatiga y aumentar su rendimiento. Además, el café se convirtió en un elemento social importante en las cafeterías y otros espacios públicos, donde los trabajadores podían reunirse y socializar, lo que también contribuyó a su popularidad.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Con la industrialización:</p>
+                    <ul>
+                        <li>Turnos laborales más largos</li>
+                        <li>Necesidad de estimulantes</li>
+                        <li>Cambio de patrones sociales</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                <div class="col-md-4">
+                    <img src="revoluciondos.png" alt="Revolución del café en la industria" class="img-fluid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dRCOwt0flLs" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Año</th>
+                                <th>Hitos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1652</td>
+                                <td>Primer café en Londres</td>
+                            </tr>
+                            <tr>
+                                <td>1780</td>
+                                <td>Nace Bank of New York en un café</td>
+                            </tr>
+                            <tr>
+                                <td>1800</td>
+                                <td>El café se convierte en la bebida preferida de los trabajadores de fábricas en Europa y América</td>
+                            </tr>
+                            <tr>
+                                <td>1860</td>
+                                <td>Las cafeterías se consolidan como centros de reunión para intelectuales y empresarios</td>
+                            </tr>
+                            <tr>
+                                <td>1901</td>
+                                <td>Se inventa la primera máquina de espresso, revolucionando la producción de café</td>
+                            </tr>
+                            <tr>
+                                <td>1938</td>
+                                <td>Nescafé introduce el café instantáneo, facilitando su consumo en entornos industriales</td>
+                            </tr>
+                            <tr>
+                                <td>1960</td>
+                                <td>El café se convierte en un símbolo de productividad en oficinas y espacios de trabajo</td>
+                            </tr>
+                            <tr>
+                                <td>1990</td>
+                                <td>Surge la tercera ola del café, enfocada en calidad y sostenibilidad en la producción</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h2><i class="fas fa-microchip icon-cafe"></i>Era del Café de Especialidad</h2>
+            <p>La era del café de especialidad comenzó en los años 70, marcando una transición de la producción masiva y de bajo costo hacia la calidad, el sabor y el origen. El término "café de especialidad" fue acuñado en 1974 por Erna Knutsen para referirse a lotes de café de alta calidad, cultivados en condiciones específicas y con características de sabor excepcionales.</p>
+            <div class="coffee-machine-card">
+                <h3>Nueva Generación de Máquinas</h3>
+                <ul>
+                    <li>Control preciso de parámetros</li>
+                    <li>Materiales sostenibles (acero inoxidable)</li>
+                    <li>Conectividad IoT</li>
+                    <li>Ahorro energético (hasta 50%)</li>
+                </ul>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <img src="revoluciontres.jpg" alt="Máquina moderna">
+                        <img src="revolucioncuatro.jpg" alt="Máquina moderna">
+                        <img src="revolucioncinco.jpg" alt="Máquina moderna">
+                    </div>
+                    <div class="col-md-8">
+                    <h4>Innovaciones Destacadas</h4>
+                    <table class="table">
+                        <tr>
+                            <td><strong>Modelo</strong></td>
+                            <td><strong>Innovación</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Ascaso Big Dream</td>
+                            <td>Acero inoxidable médico - 40% ahorro energético</td>
+                        </tr>
+                        <tr>
+                            <td>Sanremo Opera/Café Racer</td>
+                            <td>Sistema Tempcontrol para control térmico independiente</td>
+                        </tr>
+                        <tr>
+                            <td>Iberital Vision</td>
+                            <td>50% menos consumo energía - Circuitos hidráulicos independientes</td>
+                        </tr>
+                        <tr>
+                            <td>Crem New Diamant</td>
+                            <td>Crem Tech e-System con pantallas táctiles</td>
+                        </tr>
+                        <tr>
+                            <td>La Spaziale S9</td>
+                            <td>Función ECO - Caldera aislada - Conectividad Caffé d'Autore</td>
+                        </tr>
+                        <tr>
+                            <td>Astoria Storm</td>
+                            <td>Configuración manual total - Diseño colaborativo con Adriano Design</td>
+                        </tr>
+                        <tr>
+                            <td>Wega Urban</td>
+                            <td>Pantalla táctil interactiva - Bajo consumo energético</td>
+                        </tr>
+                        <tr>
+                            <td>Nuova Simonelli Aurelia Wave</td>
+                            <td>Smart Water Technology - Sistema Pulse Jet patentado</td>
+                        </tr>
+                        <tr>
+                            <td>Cup&Cino BaristaONE</td>
+                            <td>Sistema de pago por consumo - Portafiltros híbrido automático</td>
+                        </tr>
+                        <tr>
+                            <td>Jura X8</td>
+                            <td>Fresas cerámicas - Kit conexión red de agua - Autoservicio</td>
+                        </tr>
+                        <tr>
+                            <td>Saeco Idea Restyle</td>
+                            <td>Molido en frío - Paneles laterales personalizables</td>
+                        </tr>
+                        <tr>
+                            <td>Markibar Izaga</td>
+                            <td>Ventilación inteligente - Control electrónico de dosis</td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center mt-5">
+            <h3>Explora Más</h3>
+            <a href="https://www.iberital.com" target="_blank" class="btn btn-lg mt-3" style="background-color: var(--cafe-medio); color: var(--fondo-crema);">
+                <i class="fas fa-coffee"></i> Fabricantes Innovadores
+            </a>
+        </section>
+    </div>
+
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
