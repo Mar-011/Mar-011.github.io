@@ -1,57 +1,333 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <style>
-        :root {
-            --ocre-oaxaca: #f5f5f5;
-            --verde-oaxaca: #78543e;
-        }
+<meta charset="UTF-8">
+<title>La Modernización del Café en Oaxaca</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond&family=EB+Garamond&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --cafe-oscuro: #3E2723; 
+    --cafe-medio: #5D4037;
+    --cafe-claro: #8D6E63;
+    --chocolate: #3D1F00;
+    --cafe-crema: #D7CCC8;
+    --dorado: #D4AF37;
+    --cafe-blanco: #EFEBE9;
+  }
 
-        .header-oaxaca {
-            background: linear-gradient(rgba(168, 125, 108, 0.8), rgba(118, 66, 36, 0.984)),
-                        url('https://source.unsplash.com/random/1920x1080?coffee,oaxaca');
-        }
-    </style>
+  /* Barra de navegación */
+  .navbar {
+    background-color: var(--cafe-oscuro) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cafe-crema) !important;
+  }
+  
+  .nav-link {
+    color: var(--cafe-crema) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: var(--dorado) !important;
+  }
+  
+  .dropdown-menu {
+    background-color: white;
+    border-top: 5px solid var(--dorado) !important;
+  }
+  
+  .dropdown-item {
+    color: var(--cafe-oscuro);
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--cafe-crema);
+  }
+
+  body {
+    font-family: 'EB Garamond', serif;
+    background-color: #F5E3C9;
+    color: var(--cafe-oscuro);
+    text-align: center;
+    padding: 20px;
+    padding-top: 100px; /* Espacio para la barra de navegación */
+  }
+
+  .container {
+    width: 85%;
+    margin: auto;
+    padding: 25px;
+    background-color: var(--cafe-crema);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    animation: slideIn 1s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 38px;
+    color: var(--chocolate);
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--cafe-medio);
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--cafe-medio);
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+
+  ol, ul {
+    text-align: left;
+    margin: 15px auto;
+    max-width: 600px;
+  }
+
+  ol li, ul li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: var(--cafe-medio);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: var(--chocolate);
+  }
+
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  }
+
+  th, td {
+    border: 1px solid var(--cafe-oscuro);
+    padding: 12px;
+    text-align: center;
+    background-color: var(--cafe-claro);
+  }
+
+  img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+  }
+
+  marquee {
+    color: var(--chocolate);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 20px 0;
+  }
+  
+  /* Enlaces en el contenido */
+  .content-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: var(--cafe-medio);
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .content-links a:hover {
+    background-color: var(--chocolate);
+    transform: scale(1.05);
+  }
+  
+  /* Galería de imágenes */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+    
+    h1 {
+      font-size: 28px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+    
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
 </head>
-<body>
-    <header class="header-oaxaca text-white text-center py-5">
-        <h1>🎭 Café Oaxaca</h1>
-        <p>Tradición zapoteca en cada grano</p>
-    </header>
 
-    <main class="container py-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card bg-ocre-oaxaca text-white">
-                    <div class="card-body">
-                        <h5>Datos clave</h5>
-                        <ul>
-                            <li>15% producción nacional</li>
-                            <li>92% orgánico</li>
-                            <li>Denominación: Pluma Hidalgo</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <table class="table">
-                    <thead class="bg-verde-oaxaca text-white">
-                        <tr>
-                            <th>Proceso</th>
-                            <th>% Producción</th>
-                            <th>Altitud</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lavado</td>
-                            <td>60%</td>
-                            <td>900-1,600 msnm</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
+<body>
+
+
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-coffee me-2"></i>Café Mexicano
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/proyecto.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="origenesdelcafe.html">Orígenes en México</a></li>
+              <li><a class="dropdown-item" href="revolucion.html">Revolución y café</a></li>
+              <li><a class="dropdown-item" href="modernizacion.html">Modernización</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="R.chiapas.html">Chiapas</a></li>
+              <li><a class="dropdown-item" href="R.veracruz.html">Veracruz</a></li>
+              <li><a class="dropdown-item active" href="R.oaxaca.html">Oaxaca</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="arabica.html">Arabica</a></li>
+              <li><a class="dropdown-item" href="robusta.html">Robusta</a></li>
+              <li><a class="dropdown-item" href="hibrida.html">Híbridos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Redes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <h1><i class="fas fa-mug-hot"></i> La Modernización del Café en Oaxaca</h1>
+  <p>El café en Oaxaca ha experimentado una transformación significativa en las últimas décadas. Los productores han adoptado nuevas técnicas para mejorar la calidad y aumentar su competitividad.</p>
+
+  <h2><i class="fas fa-cogs"></i> Procesos Innovadores</h2>
+  <p>Desde la selección de granos hasta la comercialización, la modernización incluye la implementación de tecnología y la formación de cooperativas para potenciar la economía local.</p>
+
+  <h3><i class="fas fa-seedling"></i> Impacto en las Comunidades</h3>
+  <p>Estos cambios han impactado directamente a las comunidades cafetaleras de Oaxaca, mejorando las condiciones de vida de las familias productoras.</p>
+
+  <p>Para más información, puedes visitar estos enlaces: 
+    <ul>
+     <li><a href="https://www.oaxaca.gob.mx/ageo/oaxaca-y-su-cafe-a-traves-de-la-historia/"><i class="fas fa-external-link-alt"></i> Gobierno de Oaxaca</a></li> 
+     <li><a href="https://www.mercadosporunfuturosostenible.org/blog/orgullo-oaxaqueno-en-tu-taza-de-cafe/"><i class="fas fa-external-link-alt"></i> Café de Oaxaca</a></li>
+     <li><a href="https://historias.starbucks.com/stories/2021/starbucks-mexico-oaxaca/"><i class="fas fa-external-link-alt"></i> starbucks-mexico-oaxaca</a></>
+  </p>
+
+  <p>Los productores han incorporado prácticas sostenibles y respetuosas con el medio ambiente, garantizando la calidad y el sabor único del café oaxaqueño.</p>
+
+  <h2><i class="fas fa-list-ol"></i> Lista de Pasos Modernos en la Producción</h2>
+  <ol>
+    <li>Selección y recolección de granos maduros.</li>
+    <li>Beneficiado húmedo con equipos modernos.</li>
+    <li>Secado controlado y almacenamiento adecuado.</li>
+  </ol>
+
+  <h2><i class="fas fa-hand-holding-heart"></i> Beneficios para las Comunidades</h2>
+  <ul>
+    <li>Mejora de los ingresos económicos.</li>
+    <li>Empoderamiento de los pequeños productores.</li>
+    <li>Mayor reconocimiento en el mercado nacional e internacional.</li>
+  </ul>
+
+  <h2><i class="fas fa-chart-bar"></i> Datos Relevantes del Café en Oaxaca</h2>
+  <table>
+    <tr>
+      <th>Región</th>
+      <th>Altitud (m)</th>
+      <th>Variedad</th>
+    </tr>
+    <tr>
+      <td>Pluma Hidalgo</td>
+      <td>1200-1600</td>
+      <td>Typica</td>
+    </tr>
+    <tr>
+      <td>La Cañada</td>
+      <td>1000-1500</td>
+      <td>Bourbon</td>
+    </tr>
+    <tr>
+      <td>Mixteca</td>
+      <td>800-1400</td>
+      <td>Caturra</td>
+    </tr>
+  </table>
+
+  <marquee>¡Descubre la rica cultura cafetalera de Oaxaca y su sabor único!</marquee>
+
+  <h2><i class="fas fa-images"></i> Galería de Café en Oaxaca</h2>
+  <img src="oaxacauno.jpg" alt="Café 1">
+  <img src="oaxacados.jpg" alt="Café 2">
+  <img src="oaxacatres.jpg" alt="Café 3">
+  <img src="oaxacacuatro.jpg" alt="Café 4">
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
