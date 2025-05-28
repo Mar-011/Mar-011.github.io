@@ -1,55 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Arábica</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3e5ab;
-            color: #5b3e31;
-            text-align: center;
-        }
-        .coffee-section {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background-color: #d9b382;
-            border-radius: 10px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-        .coffee-section:hover {
-            transform: scale(1.05);
-        }
-        img {
-            width: 300px;
-            border-radius: 10px;
-        }
-        video {
-            margin-top: 15px;
-            border: 2px solid #734f35;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modernización del Café - Café Arábica</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&family=Lora&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    :root {
+        --cafe-oscuro: #59351e;
+        --cafe-medio: #6D4C41;
+        --beige: #D7CCC8;
+        --crema: #FFF3E0;
+        --dorado: #D4AF37;
+        --resalte: #BC8F8F;
+    }
+
+    body {
+        font-family: 'Lora', serif;
+        background-color: var(--cafe-oscuro);
+        color: var(--crema);
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.8)),
+            url('https://source.unsplash.com/random/1920x600?coffee') center/cover;
+        text-align: center;
+        padding: 4rem 1rem;
+        color: var(--crema);
+        border-bottom: 4px solid var(--dorado);
+    }
+
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--resalte);
+        margin-top: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 1rem 0;
+    }
+
+    table {
+        width: 100%;
+        margin: 2rem 0;
+        border-collapse: collapse;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    th {
+        background-color: var(--cafe-medio);
+        color: var(--crema);
+        padding: 0.8rem;
+    }
+
+    td {
+        background-color: var(--beige);
+        color: var(--cafe-oscuro);
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    tr:hover td {
+        background-color: var(--crema);
+        color: var(--cafe-oscuro);
+    }
+
+    .imagenes {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .imagenes img {
+        width: 200px;
+        border: 3px solid var(--dorado);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .imagenes img:hover {
+        transform: scale(1.05);
+    }
+
+    .icono {
+        color: var(--dorado);
+        margin-right: 8px;
+    }
+
+        a {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 4px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #c9957f;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Efecto hover para los enlaces */
+    a:hover {
+      background-color: #ba5124;
+      transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
-    <section class="coffee-section">
-        <h1>Café Arábica</h1>
-        <p>El café Arábica es apreciado por su suavidad y riqueza en sabores.</p>
-        
-        <img src="arabica.jpg" alt="Granos de Café Arábica">
-        
-        <ul>
-            <li>Sabor suave y afrutado</li>
-            <li>Menor contenido de cafeína</li>
-            <li>Se cultiva en altitudes elevadas</li>
-        </ul>
-        
-        <video width="400" controls>
-            <source src="arabica_video.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
-    </section>
+
+<header>
+    <h1><i class="fas fa-coffee icono"></i>Modernización del Café</h1>
+    <p>Un recorrido por la historia y evolución del café Arábica</p>
+</header>
+
+<main>
+    <h2><i class="fas fa-history icono"></i>Historia y Evolución</h2>
+    <p>El café Arábica ha tenido un papel protagónico en la historia del café en México. Su modernización se dio en diferentes etapas que marcaron la producción, comercialización y consumo del café.</p>
+
+    <h2><i class="fas fa-chart-line icono"></i>Datos Relevantes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Período</th>
+                <th>Evento</th>
+                <th>Impacto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Siglo XIX</td>
+                <td>Introducción del café arábica</td>
+                <td>Expansión del cultivo en Veracruz</td>
+            </tr>
+            <tr>
+                <td>1930s</td>
+                <td>Mejoras en técnicas de cultivo</td>
+                <td>Mayor rendimiento y calidad</td>
+            </tr>
+            <tr>
+                <td>Actualidad</td>
+                <td>Certificaciones y sostenibilidad</td>
+                <td>Comercio justo y producción orgánica</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <h2><i class="fas fa-image icono"></i>Imágenes Destacadas</h2>
+            <div class="imagenes">
+            <img src="arabicauno.png" alt="Café en grano">
+            <img src="arabicados.png" alt="Cultivo de café">
+            <img src="arabicatres.png" alt="Preparación de café">
+            <img src="arabicacuatro.jpg" alt="Taza de café arábica">
+        </div>
+
+        <h2><i class="fas fa-mug-hot icono"></i>Conclusión</h2>
+        <p>La modernización del café Arábica no solo mejoró la producción y calidad, sino que también impulsó el respeto por las prácticas sostenibles y la conservación del medio ambiente, consolidándose como un símbolo de cultura y tradición.</p>
+        <p>Para conocer más sobre el café arábica, visita estos recursos:</p>
+            <a href="https://www.bonka.es/amor-por-el-cafe/mejor-con-cafe-arabica" target="_blank">Historia del Café Arábica</a>
+
+            <a href="https://cafesgranell.es/es/coffee-blog-1940/variedades-de-cafe/que-es-el-cafe-arabica?srsltid=AfmBOoquNL7u49OuosZ-UiUWpPCikoOLp6iK78Krw4HkMyusZhP4250f" target="_blank">Producción en México</a>
+
+            <a href="https://www.cafemoderno.com" target="_blank">Innovaciones Tecnológicas</a>
+</main>
 </body>
 </html>
