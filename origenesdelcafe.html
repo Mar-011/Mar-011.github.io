@@ -3,260 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modernización del Café</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cafe-oscuro: #3E2723;
-            --cafe-medio: #6D4C41;
-            --beige: #D7CCC8;
-            --crema: #FFF3E0;
-            --dorado: #D4AF37;
-        }
+    <title>Origen del Café en México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        body {
-            font-family: 'Raleway', sans-serif;
-            background: linear-gradient(45deg, var(--crema), var(--beige));
-            color: var(--cafe-oscuro);
-            line-height: 1.8;
-            margin: 0;
-            padding: 30px;
-        }
+      <style>
+          :root {
+              --cafe-oscuro: #5C4033;
+              --cafe-medio: #8B5A2B;
+              --cafe-claro: #D2B48C;
+              --chocolate: #3D1F00;
+              --cafe-crema: #C4A484;
+          }
 
-        .contenedor {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+          body {
+              font-family: 'EB Garamond', serif;
+              background-color: #F5E3C9;
+              color: var(--cafe-oscuro);
+              text-align: center;
+              padding: 20px;
+          }
+          .container {
+              width: 85%;
+              margin: auto;
+              padding: 25px;
+              background-color: var(--cafe-crema);
+              border-radius: 15px;
+              box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+              animation: slideIn 1s ease-in-out;
+          }
+          @keyframes slideIn {
+              from { transform: translateY(50px); opacity: 0; }
+              to { transform: translateY(0); opacity: 1; }
+          }
+          h1 {
+              font-family: 'Playfair Display', serif;
+              font-style: italic;
+              font-size: 38px;
+              color: var(--chocolate);
+          }
+          h2 {
+              font-family: 'Playfair Display', serif;
+              font-style: italic;
+              font-size: 32px;
+              color: var(--cafe-medio);
+              margin-bottom: 20px;
+          }
+          img {
+              width: 400px;
+              border-radius: 10px;
+              box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+              margin-bottom: 15px;
+          }
+          video {
+              margin-top: 15px;
+              border: 3px solid var(--cafe-medio);
+              width: 80%;
+          }
+          table {
+              margin: 20px auto;
+              border-collapse: collapse;
+              width: 90%;
+          }
+          th, td {
+              border: 1px solid var(--cafe-oscuro);
+              padding: 12px;
+              text-align: left;
+              background-color: var(--cafe-claro);
+          }
+          a {
+              color: var(--cafe-medio);
+              text-decoration: none;
+              font-weight: bold;
+          }
+          a:hover {
+              color: var(--chocolate);
+          }
+          .icon {
+              font-size: 22px;
+              color: var(--cafe-oscuro);
+          }
+          .highlight {
+              font-weight: bold;
+              color: var(--chocolate);
+          }
+          p {
+              font-family: 'Cormorant Garamond', serif;
+              font-size: 18px;
+              margin-top: 20px;
+          }
+          .navbar {
+              background-color: var(--cafe-oscuro) !important;
+              box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          }
+          .navbar-brand {
+              font-family: 'Playfair Display', serif;
+              font-weight: 700;
+              font-size: 1.5rem;
+              color: var(--cafe-oscuro) !important;
+          }
+          .nav-link {
+              color: var(--cafe-oscuro) !important;
+              font-weight: 600;
+              transition: all 0.3s ease;
+              margin: 0 5px;
+          }
+          .nav-link:hover, .nav-link.active {
+              color: var(--cafe-oscuro) !important;
+          }
+          .dropdown-menu {
+              background-color: var( --cafe-crema);
+              border-top: 5px solid var(--cafe-medio) !important;
+          }
+          .dropdown-item {
+              color: var(--cafe-oscuro);
+          }
+          .dropdown-item:hover {
+              background-color: var(--cafe-claro);
+          }
+      </style>
+  </head>
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            color: var(--cafe-medio);
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            animation: tituloFlotante 2s ease-in-out infinite;
-        }
-
-        h2 {
-            color: var(--cafe-oscuro);
-            border-left: 5px solid var(--dorado);
-            padding-left: 15px;
-            margin: 2rem 0;
-            font-size: 2rem;
-        }
-
-        h3 {
-            color: var(--cafe-medio);
-            font-size: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        p {
-            margin: 1rem 0;
-            padding: 0 1rem;
-        }
-
-        img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            margin: 2rem auto;
-            display: block;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            animation: aparecer 1s ease-out;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 2px solid var(--beige);
-        }
-
-        th {
-            background-color: var(--cafe-medio);
-            color: white;
-            font-weight: 700;
-        }
-
-        tr:hover {
-            background-color: var(--beige);
-        }
-
-        a {
-            color: var(--dorado);
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: var(--cafe-medio);
-        }
-
-        ul, ol {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        li {
-            margin: 0.8rem 0;
-            padding-left: 1rem;
-        }
-
-        ul li::marker {
-            color: var(--dorado);
-            font-size: 1.2em;
-        }
-
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 15px;
-            margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        @keyframes tituloFlotante {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes aparecer {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .destacado {
-            background: var(--beige);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 5px solid var(--dorado);
-
-            
-          .video-container {
-                width: 80%;
-                margin: auto;
-                padding: 10px;
-                background-color: var(--cafe-crema);
-                border-radius: 10px;
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-                text-align: center;
-            }
-
-          iframe {
-                width: 100%;
-                height: 400px;
-                border-radius: 8px;
-                border: 3px solid var(--dorado);
-            }  
-            
-
-        }
-    </style>
-</head>
-<body>
-    <div class="contenedor">
-        <h1>☕ De la tradición a la modernización tecnológica</h1>
-        
-        <h2>Transformación Digital en la Caficultura</h2>
-        <p>La modernización de la caficultura en México implica diversos aspectos, desde la adopción de tecnologías de producción y procesamiento hasta la promoción de prácticas agrícolas sostenibles y la diversificación del mercado. El objetivo es mejorar la productividad, la calidad del café y la competitividad de los productores, especialmente aquellos de pequeña escala. </p>
-        
-        <img src="modernizaciontres.jpg" alt="Tecnología en caficultura">
-        
-        <div class="destacado">
-            <h3>Aspectos clave de la modernización:</h3>
-           <ol>
-             <li>Tecnología y capacitación:</li>
-             <p>Se promueve la adopción de tecnologías de producción, como la utilización de maquinaria moderna y técnicas de manejo del suelo y la fertilización, para mejorar la eficiencia y la calidad del grano. También se fomenta la capacitación de los productores en buenas prácticas agrícolas y en el manejo de la cosecha y procesamiento del café. </p>
-             <li>Sostenibilidad:</li>
-             <p>Se busca la producción de café de manera sostenible, respetando el medio ambiente y las comunidades locales. Esto incluye la promoción de prácticas de cultivo orgánico y la adopción de sistemas agroforestales. </p>
-             <li>Diversificación y valor agregado:</li>
-             <p>Se fomenta la producción de cafés especiales y la diversificación de productos derivados del café, para aumentar el valor agregado de la producción y mejorar la rentabilidad de los productores. </p>
-             <li>Investigación y desarrollo:</li>
-             <p>Se promueve la investigación y el desarrollo de nuevas variedades de café, así como la mejora de las técnicas de procesamiento y comercialización, para fortalecer la competitividad del sector. </p>
-             <li>Financiamiento y apoyo a pequeños productores:</li>
-             <p>Se implementan programas de financiamiento y asistencia técnica para apoyar a los pequeños productores, quienes representan la mayoría del sector cafetalero mexicano. </p>
-        </ol>
-           
-        </div>
-
-        <h2>Evolución de la Producción</h2>
-        <p>Comparativa de métodos tradicionales vs. modernos:</p>
-        
-        <table>
-            <tr>
-                <th>Aspecto</th>
-                <th>1980-2000</th>
-                <th>2020-actualidad</th>
-            </tr>
-            <tr>
-                <td>Selección de granos</td>
-                <td>Manual</td>
-                <td>Escáneres hiperespectrales</td>
-            </tr>
-            <tr>
-                <td>Tueste</td>
-                <td>Experiencia artesanal</td>
-                <td>Control por termopares digitales</td>
-            </tr>
-            <tr>
-                <td>Productividad</td>
-                <td>50 kg/día</td>
-                <td>500 kg/día</td>
-            </tr>
-        </table>
-
-        <h3> La innovación en métodos de preparación ha abierto nuevas posibilidades en cuanto a sabor y experiencia, gracias a la introducción de nuevas técnicas y herramientas.</h3>
-        <P>Frente a este panorama, invertir en herramientas tecnológicas como sensores de temperatura, RFID y computadores móviles, ya que permiten:</P>
-        <ul>
-            <li>Conectividad para rastrear los granos de café desde el origen hasta el consumidor final</li>
-            <li>Preservación de la calidad del producto durante el transporte</li>
-            <li>Gestión de inventarios de manera eficiente</li>
-            <li>Visibilidad de la ubicación del grano o de los empaques de café</li>
-            <li>Una cadena de suministro más eficiente, transparente y conectada</li>
-        </ul>
-
-        <img src="modernizaciondos.jpg" alt="Robótica en café">
-        
-            <h2>Recursos Digitales</h2>
-            <p>Explora estas plataformas mexicanas sobre café y tecnología:</p>
-            <p><a href="https://perfectdailygrind.com/es/2022/10/25/canales-digitales-venta-cafes-diferenciados/" target="_blank">🌐 Perfect Daily Grind</a></p>
-            <p><a href="https://joinposter.mx/negocio/punto-de-venta-para-cafeterias" target="_blank">🚀 Poster POS</a></p>
-            <p><a href="https://www.digitalcoffeefuture.com/sobre-nosotros" target="_blank">☕ Digital Coffee Future</a></p>
-
-
-            <h3>Café de Innovación: Lo necesario relacionado con innovación y emprendimiento</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/h-Y0NzFHjMw" title="Retail 4.0: Innovación que Transforma" allowfullscreen></iframe>
+        <body>
+          <header data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+              <div class="container">
+                <a class="navbar-brand" href="#">
+                  <i class="fas fa-coffee me-2"></i>Café Mexicano
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <a class="nav-link fw-bold py-1 px-0 mx-2" href="/proyecto.html">Inicio</a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Historia</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="origenesdelcafe.html">Orígenes en México</a></li>
+                        <li><a class="dropdown-item" href="revolucion.html">Revolución y café</a></li>
+                        <li><a class="dropdown-item" href="modernizacion.html">Modernización</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="R.chiapas.html">Chiapas</a></li>
+                        <li><a class="dropdown-item" href="R.veracruz.html">Veracruz</a></li>
+                        <li><a class="dropdown-item" href="R.oaxaca.html">Oaxaca</a></li>
+                        <li><a class="dropdown-item" href="R.puebla.html">Puebla</a></li>
+                        <li><a class="dropdown-item" href="R.nayarityguerrero.html">Otros estados</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Variedades</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="arabica.html">Arabica</a></li>
+                        <li><a class="dropdown-item" href="robusta.html">Robusta</a></li>
+                        <li><a class="dropdown-item" href="hibrida.html">Híbridos</a></li>
+                        <li><a class="dropdown-item" href="denominaciones.html">Denominaciones</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Redes</a></li>
+                  </ul>
                 </div>
+              </div>
+            </nav>
+          </header>
+
+          <div class="container">
+              <br>
+              <br>
+              <br>
+              <br>
+              <h1><i class="fas fa-seedling icon"></i> Origen del Café en México</h1>
+              
+              <h2>📜 Introducción</h2>
+              <p>El café llegó a México en el siglo XVIII, traído por comerciantes europeos que buscaban expandir el mercado de este producto. Las condiciones climáticas del país favorecieron su cultivo y hoy en día es una de las bebidas más representativas de México.</p>
+
+              <img src="origenuno.jpg" alt="Cultivo de Café en México">
+
+              <h2>📌 Expansión del Cultivo</h2>
+              <ul>
+                  <li><i class="fas fa-check-circle icon"></i> El primer registro del café en México data de **1790**, cuando comenzó a cultivarse en **Veracruz**.</li>
+                  <li><i class="fas fa-check-circle icon"></i> Durante el siglo XIX, el gobierno incentivó su producción en estados con condiciones favorables.</li>
+                  <li><i class="fas fa-check-circle icon"></i> Para 1900, México ya exportaba café a Europa y Estados Unidos.</li>
+              </ul>
+
+              <h2>📊 Evolución de la Producción</h2>
+              <table>
+                  <tr>
+                      <th>Año</th>
+                      <th>Producción Nacional (toneladas)</th>
+                      <th>Exportaciones Principales</th>
+                  </tr>
+                  <tr>
+                      <td>1850</td>
+                      <td>150,000</td>
+                      <td>Europa, Estados Unidos</td>
+                  </tr>
+                  <tr>
+                      <td>1950</td>
+                      <td>500,000</td>
+                      <td>Francia, Alemania</td>
+                  </tr>
+                  <tr>
+                      <td>2000</td>
+                      <td>850,000</td>
+                      <td>Estados Unidos, Japón</td>
+                  </tr>
+                  <tr>
+                      <td>2024</td>
+                      <td>900,000</td>
+                      <td>Estados Unidos, Europa, Asia</td>
+                  </tr>
+              </table>
+
+              <h2>🌎 Impacto Social y Cultural</h2>
+              <p>El café no solo es una bebida, sino un elemento clave en la identidad mexicana.</p>
+              <ol>
+                  <li><i class="fas fa-users icon"></i> Es parte de reuniones sociales, sobremesas y desayunos.</li>
+                  <li><i class="fas fa-leaf icon"></i> Su cultivo es vital para miles de productores rurales.</li>
+                  <li><i class="fas fa-book icon"></i> Se menciona en canciones, literatura y obras cinematográficas.</li>
+              </ol>
+
+              <h2>🔎 Datos Curiosos</h2>
+              <ul>
+                  <li>El café de **Chiapas** es considerado uno de los mejores del mundo.</li>
+                  <li>En México se cultivan más de <span class="highlight">500,000 hectáreas</span> de café.</li>
+                  <li>El consumo per cápita en México es de aproximadamente **1.4 kg al año**.</li>
+              </ul>
 
 
+              <h3>📽️ Documental sobre el Café Mexicano</h3>
+              <p>El café no es solo una bebida: es una historia de exploración, comercio y cultura que ha conquistado el mundo. Desde su misterioso origen en Etiopía hasta las vibrantes cafeterías del siglo XVI, su recorrido ha estado marcado por descubrimientos, rituales y aventuras. ¿Sabías que en sus inicios los etíopes no bebían café, sino que masticaban sus bayas para aprovechar su energía? O que los sufíes lo usaban en ceremonias religiosas para mantenerse despiertos durante sus oraciones nocturnas.
+                Este documental te llevará a través de los siglos para revelar los secretos del café, desde sus primeras formas de consumo hasta su expansión por el mundo. Una bebida que sobrevivió tormentas, piratas y guerras para convertirse en el elixir de millones de personas cada día. Prepárate para descubrir qué hace al café tan especial y cómo ha llegado a ser la segunda mercancía más valiosa del planeta. ¡Dale play y sumérgete en su historia! ☕🎥
+              </p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/tROh0HpnKjA" frameborder="0" allowfullscreen></iframe>
 
 
-            <img src="modernizacionuno.jpg" alt="Café inteligente">
-        
-        <h3>Sostenibilidad Tecnológica</h3>
-        <p>Las nuevas máquinas reducen hasta un 40% el consumo energético y utilizan materiales 100% reciclables, marcando un hito en producción eco-amigable.</p>
-    </div>
-</body>
+              <h2>📖 Enlaces de Interés</h2>
+              <ul>
+                  <li><i class="fas fa-book-open icon"></i> <a href="https://perfectdailygrind.com/es/2020/03/30/origenes-del-cafe-una-guia-de-mexico/">Historia del Café en México</a></li>
+                  <li><i class="fas fa-industry icon"></i> <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-53462019000100041">Impacto Económico del Café</a></li>
+              </ul>
+          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      </body>
 </html>
